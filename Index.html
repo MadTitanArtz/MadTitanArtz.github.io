@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>MAD TITAN ARTZ — First_shelby's creation</title>
+
+<meta name="description" content="MAD TITAN ARTZ — photography, filmmaking and visual storytelling by First Shelby.">
+
+<style>
+:root{
+  --bg:#070707;
+  --text:#f2efe9;
+  --muted:#aaa59d;
+  --line:#2a2a2a;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* NAVIGATION */
+
+.nav{
+  position:fixed;
+  z-index:10;
+  top:0;
+  left:0;
+  right:0;
+  padding:22px 5vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(#070707dd,transparent);
+}
+
+.brand{
+  font-weight:800;
+  letter-spacing:.12em;
+  font-size:14px;
+}
+
+.navlinks{
+  display:flex;
+  gap:24px;
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:#111;
+}
+
+.hero img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.55);
+  transform:scale(1.02);
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 35%,#070707 100%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:0 6vw 10vh;
+  max-width:900px;
+}
+
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:#ccc;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(50px,11vw,150px);
+  line-height:.82;
+  margin:0;
+  letter-spacing:-.06em;
+}
+
+.signature{
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:clamp(20px,3vw,34px);
+  margin-top:24px;
+  color:#ddd;
+}
+
+.scroll{
+  margin-top:45px;
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:#aaa;
+}
+
+/* SECTIONS */
+
+section{
+  padding:110px 6vw;
+  border-top:1px solid var(--line);
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+  margin-bottom:45px;
+}
+
+.section-title{
+  font-size:clamp(35px,6vw,75px);
+  letter-spacing:-.04em;
+  margin:0;
+}
+
+.section-note{
+  max-width:330px;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* FEATURE */
+
+.feature{
+  display:grid;
+  grid-template-columns:1.4fr .8fr;
+  gap:24px;
+  align-items:stretch;
+}
+
+.feature img{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  object-fit:cover;
+}
+
+.feature-copy{
+  border:1px solid var(--line);
+  padding:35px;
+  display:flex;
+  flex-direction:column;
+  justify-content:end;
+}
+
+.feature-copy h3{
+  font-size:32px;
+  margin:0 0 15px;
+}
+
+.feature-copy p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* GALLERY */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.card{
+  overflow:hidden;
+  background:#101010;
+}
+
+.card img{
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  transition:transform .7s;
+}
+
+.card:hover img{
+  transform:scale(1.04);
+}
+
+/* ABOUT */
+
+.about{
+  max-width:900px;
+}
+
+.about p{
+  font-size:clamp(25px,4vw,52px);
+  line-height:1.12;
+  letter-spacing:-.035em;
+  margin:0;
+}
+
+/* CONTACT */
+
+.contact{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+}
+
+.contact h2{
+  font-size:clamp(45px,8vw,100px);
+  line-height:.9;
+  margin:0;
+  letter-spacing:-.06em;
+}
+
+.contact-right{
+  max-width:350px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px 6vw;
+  color:#777;
+  font-size:11px;
+  display:flex;
+  justify-content:space-between;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .feature{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact{
+    display:block;
+  }
+
+  .contact-right{
+    margin-top:35px;
+  }
+
+  section{
+    padding:80px 6vw;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+
+<a class="brand" href="#top">
+MAD TITAN ARTZ
+</a>
+
+<div class="navlinks">
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
+<header class="hero" id="top">
+
+<img src="hero-sunset.jpg"
+alt="Orange sunset sky photographed by MAD TITAN ARTZ">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Photography · Film · Visual Storytelling
+</div>
+
+<h1>
+MAD<br>
+TITAN<br>
+ARTZ
+</h1>
+
+<div class="signature">
+First_shelby's creation
+</div>
+
+<div class="scroll">
+Scroll to explore ↓
+</div>
+
+</div>
+
+</header>
+
+
+<section id="work">
+
+<div class="section-head">
+
+<h2 class="section-title">
+Selected work
+</h2>
+
+<div class="section-note">
+A first collection of moments, places and details seen through my lens.
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<img src="gallery-collage.jpg"
+alt="Collection of architectural, sculpture and city photographs">
+
+<div class="feature-copy">
+
+<div class="eyebrow">
+01 / Photography
+</div>
+
+<h3>
+Lagos / Fragments
+</h3>
+
+<p>
+Architecture, sculpture, streets and sky —
+ordinary places viewed from an unusual angle.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-head">
+
+<h2 class="section-title">
+Atmosphere
+</h2>
+
+<div class="section-note">
+Light is the subject. The camera is only how I listen to it.
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<img src="hero-sunset.jpg"
+alt="Dramatic orange sunset">
+
+</div>
+
+<div class="card">
+
+<img src="gallery-collage.jpg"
+alt="City and sculpture photography collection">
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="about">
+
+<div class="eyebrow">
+About MAD TITAN ARTZ
+</div>
+
+<p>
+I create images and films that turn places,
+people and moments into stories —
+one frame at a time.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<div class="contact">
+
+<div>
+
+<div class="eyebrow">
+Let's create
+</div>
+
+<h2>
+MAKE<br>
+SOMETHING<br>
+WORTH SEEING.
+</h2>
+
+</div>
+
+
+<div class="contact-right">
+
+For photography, film and creative collaborations,
+find MAD TITAN ARTZ on Instagram.
+
+<br><br>
+
+<a href="https://www.instagram.com/first_shelby/"
+target="_blank"
+rel="noopener">
+
+@first_shelby ↗
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<span>
+© MAD TITAN ARTZ
+</span>
+
+<span>
+First_shelby's creation
+</span>
+
+</footer>
+
+</body>
+</html>
